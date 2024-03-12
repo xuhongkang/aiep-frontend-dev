@@ -2,7 +2,6 @@
 import {useEffect, useRef, useState} from 'react';
 import Bubble from '../components/Bubble'
 import { useChat, Message } from 'ai/react';
-import Footer from '../components/Footer';
 import Configure from '../components/Configure';
 import PromptSuggestionRow from '../components/PromptSuggestions/PromptSuggestionsRow';
 import ThemeButton from '../components/ThemeButton';
@@ -54,7 +53,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">Chatting with the Astra chatbot is a breeze! Simply type your questions or requests in a clear and concise manner. Responses are sourced from Astra documentation and a link for further reading is provided.</p>
+          <p className="chatbot-text-secondary-inverse text-sm md:text-base mt-2 md:mt-4">Chatting with the AIEP chatbot is a breeze! Simply type your questions or requests in a clear and concise manner. Responses are sourced from AIEP Knowledge Base and a link for further reading will be provided.</p>
         </div>
         <div className='flex-1 relative overflow-y-auto my-4 md:my-6'>
           <div className='absolute w-full overflow-x-hidden'>
@@ -73,7 +72,6 @@ export default function Home() {
             <span className='hidden origin:block font-semibold text-sm ml-2'>Send</span>
           </button>
         </form>
-        <Footer />
       </section>
     </main>
     <Configure
