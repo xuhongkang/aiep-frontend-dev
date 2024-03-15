@@ -2,10 +2,10 @@ import PromptSuggestionButton from "./PromptSuggestionButton";
 
 const PromptSuggestionRow = ({ onPromptClick }) => {
   const prompts = [
-    'What types of sensitive personal information is in an IEP?',
+    'What types of sensitive personal information are in an IEP?',
     'Please explain different IEP reviews.',
-    'What is standard reclassification?',
-    'What meetings do I have to go to if my child transitions to another district?',
+    'What is standard reclassification and how does it differ from the individual one?',
+    'What meetings do I have to go to if my child transitions to another district?'
   ];
 
   return (
