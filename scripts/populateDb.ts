@@ -9,7 +9,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-const astraDb = new AstraDB("AstraCS:ixkZXxQEhWErIlXIZeFpBeKy:efa3d5a732ba100185651c43dbe5b4a6464e45e7fc157642ca838850bddfac30", "https://5d1d77e1-1b50-4e99-85dc-b73ded8850f2-us-east-1.apps.astra.datastax.com", "default_keyspace");
+const astraDb = new AstraDB(process.env.ASTRA_DB_APPLICATION_TOKEN, process.env.ASTRA_DB_ENDPOINT, process.env.ASTRA_DB_NAMESPACE);
 
 const splitter = new RecursiveCharacterTextSplitter({
   chunkSize: 1000,
