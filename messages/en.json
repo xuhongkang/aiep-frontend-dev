@@ -1,0 +1,33 @@
+{
+    "HomePage": {
+        "Welcome": "Hello!",
+        "Welcome2": "Welcome to AI-EP Version 2.3.1 Beta Testing. Please enter your Access Key below if you have one:",
+        "Welcome3": "Get Started",
+        "LoginMessage":"Log In Now!",
+        "Description1": "Transform your IEP experience with Instant Translations, providing real-time, comprehensive translations to eliminate wait times and enhance understanding. Our generative AI-driven chatbot delivers personalized answers and support.",
+        "SignUpMessage": "Don't Have an Account? Register Now!",
+        "Description2": "Our solution aims to democratize access to educational resources, ensuring that all parents, regardless of language or background, can effectively participate in and contribute to their child's personalized educational plan.",
+        "LoginText": "Log In",
+        "RegisterText": "Register",
+        "UsernameText": "Username",
+        "PasswordText": "Password"
+    },
+    "LocaleLayout": {
+        "title": "AI-EP: Translate and Understand Your IEP!"
+    },
+    "Dashboard": {
+        "ErrorMessage": "Beta version 2.3 does not support dashboard and upload due to provisioning issues, please await the next version!",
+        "MenuButtonMessage": "Return to Menu"
+    },
+    "LocaleSwitcher": {
+        "label": "Choose Your Language"
+    },
+    "Workspace": {
+        "TranslationText": "IEP Translation",
+        "PromptText": "What would you like to know more about your child's IEP process?",
+        "InputText": "Describe Here",
+        "AskText": "Ask",
+        "BotText": "Bot",
+        "UserText": "User"
+    }
+}
