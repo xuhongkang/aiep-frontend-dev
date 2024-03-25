@@ -8,7 +8,7 @@ const openai = new OpenAI({
 
 const astraDb = new AstraDB(process.env.ASTRA_DB_APPLICATION_TOKEN, process.env.ASTRA_DB_ENDPOINT, process.env.ASTRA_DB_NAMESPACE);
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
     const {messages, useRag, llm, similarityMetric} = await req.json();
 
