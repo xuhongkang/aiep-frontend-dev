@@ -13,11 +13,9 @@ export default function Workspace({botText, userText, askText, promptText, input
   return (
     <div
       className="flex flex-row snap-x snap-mandatory overflow-x-auto"
-      style={{height: '100vh',}}
-    >
-      
+      style={{height: '100vh',}}>
       <div className="flex-none w-full md:w-1/2 snap-center overflow-x-hidden">
-      <TranslationPage/>
+        <TranslationPage/>
       </div>
       <div className="flex-none w-full md:w-1/2 snap-center overflow-x-hidden">
         <ChatBot />

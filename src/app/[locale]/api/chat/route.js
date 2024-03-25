@@ -27,21 +27,21 @@ export async function POST(req) {
         limit: 5,
       });
       
-      const documents = await cursor.toArray();
+      const entries = await cursor.toArray();
       
-      docContext = `
+      promptContext = `
         START CONTEXT
-        ${documents.map(doc => `Name: ${doc.header}\nContent: ${doc.content}\nURL: ${doc.url}`).join("\n")}
+        ${entries.map(entry => `Name: ${entry.header}\nContent: ${entry.content}\nURL: ${entry.url}`).join("\n")}
         END CONTEXT
       `
     }
     const ragPrompt = [
       {
         role: 'system',
-        content: `You are an AI assistant answering questions about Individualized Education Programs. Must output markdown code. Must reference url links where applicable regardless of language.
-        context: ${docContext} 
+        content: `You are an AI assistant answering questions about Individualized Education Programs. Must output markdown code. Must reference url links where applicable. Must use words at an elementary level. 
+        context: ${promptContext} 
         current prompt: '${latestMessage}'
-        Strictly reply in the language the current prompt is given in (don't change the url links). If the question is related to IEPs but out of context, try to answer it with your own knowledge".
+        Strictly reply in the language the current prompt is given in (don't change the url links). Try to answer relevant questions readable to low literacy non-English speaking parents.
       `,
       },
     ]
