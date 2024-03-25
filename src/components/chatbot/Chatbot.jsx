@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
     <main className="flex bg-primary h-screen flex-col items-center justify-center">
-      <section className='flex flex-col w-full h-full rounded-md p-2 md:p-6'>
+      <section className='flex flex-col h-full rounded-md p-2 md:p-6'>
       <div className='pb-6'>
           <div className='flex justify-between'>
             <div className='flex items-center gap-2'>
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
         <div className='flex-1 relative overflow-y-auto my-4 md:my-6'>
           <div className='absolute w-full'>
-            {messages.map((message, index) => <Bubble ref={messagesEndRef} key={`message-${index}`} content={message} />)}
+            {messages.map((message, index) => <Bubble ref={messagesEndRef} key={`message-${index}`} content={message}/>)}
           </div>
         </div>
         {!messages || messages.length === 0 && (
