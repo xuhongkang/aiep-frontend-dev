@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/[locale]/page.js", "src/app/[locale]/layout.js", "src/components/LocaleSwitcherModal.js", "src/components/TranslationPage.js", "src/app/[locale]/upload/page.js", "src/components/ChatBotFeed.js", "src/components/ChatBotPage.js", "src/app/[locale]/workspace/page.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/[locale]/page.js", "src/app/[locale]/layout.js", "src/components/LocaleSwitcherModal.js", "src/components/TranslationPage.js", "src/app/[locale]/upload/page.js", "src/components/ChatBotFeed.js", "src/components/ChatBotPage.js", "src/app/[locale]/workspace/page.js", "src/components/GoalCard.js"],
   "exclude": ["node_modules"]
 }
