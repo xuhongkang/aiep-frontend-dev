@@ -31,7 +31,6 @@ export default function Home() {
   };
 
   return (
-    <>
     <main className="flex bg-primary h-screen flex-col items-center justify-center">
       <section className='flex flex-col h-full rounded-md p-2 md:p-6'>
       <div className='pb-6'>
@@ -61,6 +60,5 @@ export default function Home() {
         </form>
       </section>
     </main>
-    </>
   )
 }

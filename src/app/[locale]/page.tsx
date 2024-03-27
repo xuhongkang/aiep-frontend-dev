@@ -1,4 +1,4 @@
-import WorkspacePage from '@/components/WorkspacePage'
+import UserSelect from '@/components/UserSelect'
 import {useTranslations} from 'next-intl';
 import {unstable_setRequestLocale} from 'next-intl/server';
 
@@ -11,8 +11,6 @@ export default function Home({params: {locale}}: Props) {
   const t = useTranslations('Workspace');
   
   return (
-    <div className='flex flex-col items-start'>
-      <WorkspacePage botText={t('BotText')} userText={t('UserText')} askText={t('AskText')} promptText={t('PromptText')} inputText={t("InputText")} translationText={t('TranslationText')}/>
-    </div>
+    <UserSelect/>
   );
 }

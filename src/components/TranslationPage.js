@@ -244,7 +244,7 @@ export default function TranslationPage() {
                 </div>
                 <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Download" />
                 <div role="tabpanel" className="tab-content p-5 h-screen overflow-auto flex-none">
-                    <iframe className='iframe h-full' src={`/iep_translated.pdf`} type="application/pdf" width='100%' height='100%' loading="lazy"/>
+                    <iframe className='iframe h-full' src={`https://aiep-files.s3.amazonaws.com/raw/1.pdf`} type="application/pdf" width='100%' height='100%' loading="lazy"/>
                 </div>
             </div>)}
         </div>
