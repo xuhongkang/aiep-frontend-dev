@@ -34,7 +34,7 @@ export default function TranslationPage() {
     };
 
     return (
-        <div className="flex flex-col h-screen w-full rounded-md p-2 md:p-6">
+        <div className="flex flex-col h-full w-full rounded-md p-2 md:p-6">
             <div className='pb-6 flex-none'>
                 <div className='flex justify-between'>
                     <div className='flex items-center gap-2'>
@@ -243,7 +243,7 @@ export default function TranslationPage() {
                     <text className='leading-relaxed whitespace-pre-line overflow-y-auto'>{translationText[pageIndex]}</text>
                 </div>
                 <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Download" />
-                <div role="tabpanel" className="tab-content p-5 h-screen overflow-auto flex-none">
+                <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
                     <iframe className='iframe h-full' src={`https://aiep-files.s3.amazonaws.com/raw/1.pdf`} type="application/pdf" width='100%' height='100%' loading="lazy"/>
                 </div>
             </div>)}

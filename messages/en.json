@@ -29,5 +29,13 @@
         "AskText": "Ask",
         "BotText": "Bot",
         "UserText": "User"
+    },
+    "UserSelect": {
+        "l1": "New to Individualized Education Programs?",
+        "l2": "<--   Read more about the IEP Process & Timeline",
+        "l3": "For newcoming parents without IEP documents",
+        "r1": "Need Insights on your IEP Document?",
+        "r2": "<--   Try out the IEP Digest and personalized chatbot",
+        "r3": "For experienced parents trying to understand their child's IEP"
     }
 }
