@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import GoalCard from './GoalCard';
 import { getSessionData } from './API';
+import AccommodationCard from './AccommodationCard'
 
 export default function TranslationPage() {
     const [translationText, setTranslationText] = useState([]);
@@ -88,7 +89,7 @@ export default function TranslationPage() {
     annualGoalDescription={"By 08/28/2024, [NAME REDACTED] will be able to use active reading skills like highlighting subjects, places, or times, in order to respond to literal questions about an independent level text with 80% accuracy."}/><GoalCard 
     areaOfNeed={"Writing Composition"}
     goalDescription={"By 08/28/2024, [NAME REDACTED] will be able to use a word bank of temporal words like first, then, and next, as well as a bank of descriptive words, in order to complete a 1 paragraph piece that coherently describes a familiar process like her morning routine with 75% accuracy across 4/5 trials."}
-    progressRate={0}
+    progressRate={75}
     baselineDescription={"[NAME REDACTED] is writing pieces with a clear beginning, middle and end with 25% accuracy and few qualifying details."}
     progessReport1Date={""}
     progessReport1Description={""}
@@ -112,7 +113,7 @@ export default function TranslationPage() {
     annualGoalDescription={"By 08/28/2024, when given a set of single step word problems with addition and subtraction within 100 at her independent reading level, [NAME REDACTED] will follow four steps: (1) read the problem and restate the story, (2) identify the relevant quantities, (3) set up the equation, and (4) perform the necessary calculations accurately completing 3/4 steps or 75% of the process across 5 problems."}/><GoalCard 
     areaOfNeed={"Articulation/Phonology"}
     goalDescription={"During structured therapy activities, [NAME REDACTED] will improve her speech intelligibility at the sentence level to 70% accuracy in spontaneous conversation. When the listener indicates that he/she doesn't understand, [NAME REDACTED] will use her AAC device and/or rephrase her utterance, in 4/5 opportunities."}
-    progressRate={50}
+    progressRate={70}
     baselineDescription={"[NAME REDACTED]'s intelligibility remains around 50% when the topic is familiar to the listener. When the topic is unknown, intelligibility is 50%. When the listener indicates that they do not understand, [NAME REDACTED] rephrases her utterance in 3/5 opportunities, and uses her device to repair the breakdown in 2/5 opportunities."}
     progessReport1Date={""}
     progessReport1Description={""}
@@ -231,8 +232,39 @@ export default function TranslationPage() {
     annualGoalDate={"8/30/2023"}
     annualGoalDescription={"By 8/30/2023, Keiry will display improved fine motor skills to meet the measurable objectives for increased independence and greater success in classroom activities, given adaptive materials/tools and verbal cues as needed, in 4 out of 5 opportunities."}/>
                 </div>
-                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Action Items"/>
-                <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">Working In Progress</div>
+                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Accomodations"/>
+                <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
+                    <AccommodationCard
+                        service="Specialized Academic Instruction"
+                        provider="District of Service"
+                        comments="For teaching skills specific to IEP goals"
+                        startDate="8/30/2023" 
+                        endDate="8/28/2024"
+                        location="Regular classroom/public day school" 
+                        frequency="Week" 
+                        duration="300 min"
+                    />
+                    <AccommodationCard
+                        service="Occupational Therapy"
+                        provider="District of Service"
+                        comments="Student will be seen in a small group with at most 2 other peers with similar goals."
+                        startDate="8/29/2023" 
+                        endDate="8/28/2024"
+                        location="Service Provider Location" 
+                        frequency="Week" 
+                        duration="30 min"
+                    />
+                    <AccommodationCard
+                        service="Language and Speech"
+                        provider="District of Service"
+                        comments="Sessions shall be 3 25 minute indivvidual sessions and one 25 minute group session"
+                        startDate="8/29/2023" 
+                        endDate="8/28/2024"
+                        location="Service Provider Location" 
+                        frequency="Week" 
+                        duration="100 min"
+                    />
+                </div>
                 <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Full Text" />
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
                     <div className="join p-0">
@@ -244,7 +276,7 @@ export default function TranslationPage() {
                 </div>
                 <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Download" />
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
-                    <iframe className='iframe h-full' src={`https://aiep-files.s3.amazonaws.com/raw/1.pdf`} type="application/pdf" width='100%' height='100%' loading="lazy"/>
+                    <iframe className='iframe h-screen' src={`/iep_translated.pdf`} type="application/pdf" width='100%'/>
                 </div>
             </div>)}
         </div>

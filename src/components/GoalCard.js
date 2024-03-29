@@ -1,5 +1,3 @@
-import { G } from "@react-pdf/renderer";
-
 export default function GoalCard({areaOfNeed, goalDescription, progressRate, baselineDescription, progessReport1Date, progessReport1Description, progessReport2Date, progessReport2Description, progessReport3Date, progessReport3Description, annualGoalDate, annualGoalDescription}) {
     return (
         <div className="card w-full bg-error text-primary-content">

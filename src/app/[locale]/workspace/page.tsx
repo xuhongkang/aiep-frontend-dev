@@ -1,4 +1,3 @@
-import LocaleSwitcherModal from '@/components/LocaleSwitcherModal';
 import WorkspacePage from '@/components/WorkspacePage'
 import {useTranslations} from 'next-intl';
 import {unstable_setRequestLocale} from 'next-intl/server';
@@ -12,13 +11,8 @@ export default function Workspace({params: {locale}}: Props) {
   const t = useTranslations('Workspace');
   
   return (
-    <div className="flex flex-col h-screen">
-      <ul className="menu menu-horizontal w-full p-0">
-          <LocaleSwitcherModal/>
-      </ul>
-      <div className='flex-grow'>
-        <WorkspacePage/>
-      </div>
+    <div className='flex flex-col items-start'>
+      <WorkspacePage />
     </div>
   );
 }
