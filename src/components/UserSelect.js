@@ -16,7 +16,7 @@ export default function UserSelect({l1, l2, l3, r1, r2, r3}) {
     <div className="flex flex-wrap w-full h-full">
         {/* Left Side */}
         <div className="w-full md:w-1/2 bg-primary flex items-center justify-center cursor-pointer">
-        <Link className='w-full' href={`https://iep-kb-24839890c1f5.herokuapp.com${currentLocale === 'en' ? '' : `/${currentLocale}`}/quickstart/IEP_quickstart`} passHref>
+        <Link className='w-full' href={`https://iep-kb-24839890c1f5.herokuapp.com${currentLocale === 'en' ? '' : `/${currentLocale}`}/quickstart/guide`} passHref>
             <div className="text-white flex flex-col items-center justify-center w-full p-4">
                 <img alt="New to IEP" src="/images/newcoming.png" className="w-1/3 h-1/3"/>
                 <header className="font-bold text-3xl mb-2 text-center">{l1}</header>
