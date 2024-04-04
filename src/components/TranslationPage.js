@@ -4,7 +4,7 @@ import GoalCard from './GoalCard';
 import { getSessionData } from './API';
 import AccommodationCard from './AccommodationCard'
 
-export default function TranslationPage() {
+export default function TranslationPage({digestTitle, digestDescription, accessError, accessMessage, accessPlaceholder, accessSubmit, downloadTabName, textTabName, servicesTabName, goalsTabName, scoresTabName}) {
     const [translationText, setTranslationText] = useState([]);
     const [pageIndex, setpageIndex] = useState(0);
     const [accessCode, setAccessCode] = useState('');
@@ -39,40 +39,40 @@ export default function TranslationPage() {
             <div className='pb-6 flex-none'>
                 <div className='flex justify-between'>
                     <div className='flex items-center gap-2'>
-                    <h1 className='chatbot-text-primary text-xl md:text-2xl font-medium'>IEP Digest</h1>
+                    <h1 className='chatbot-text-primary text-xl md:text-2xl font-medium'>{digestTitle}</h1>
                     </div>
                 </div>
-                <p className="text-sm md:text-base mt-2 md:mt-4">Please utilize the below tools to view your processed IEP document.</p>
+                <p className="text-sm md:text-base mt-2 md:mt-4">{digestDescription}</p>
             </div>
             {!isAccessCodeError ? (
                 <div></div>
             ):(
                 <div role="alert" className="alert alert-error">
                 <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <span>The Access Code You've Provided Does Not Exist, Please Try Again</span>
+                <span>{accessError}</span>
               </div>
             )}
             {!isTablistVisible ? (
                 <div className="card w-full bg-neutral text-neutral-content">
                 <div className="card-body items-center text-center">
-                <p className="text-sm md:text-base mt-2 md:mt-4">Please enter your access code below:</p>
+                <p className="text-sm md:text-base mt-2 md:mt-4">{accessMessage}</p>
                   <form onSubmit={handleAccessCodeSubmit}>
                     <input className='input input-bordered w-full max-w-xs'
                         type="text" 
-                        placeholder="Enter access code" 
+                        placeholder={accessPlaceholder}
                         value={accessCode} 
                         onChange={(e) => setAccessCode(e.target.value)} 
                     />
-                    <button className='btn btn-primary' type="submit">Submit</button>
+                    <button className='btn btn-primary' type="submit">{accessSubmit}</button>
                 </form>
                 </div>
               </div>
                
             ) : (
             <div role="tablist" className="tabs tabs-boxed whitespace-nowrap flex-grow items-start overflow-hidden">
-                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Academic Progress"/>
+                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={scoresTabName}/>
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">Working In Progress</div>
-                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Goals"/>
+                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={goalsTabName}/>
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none" id='haha'>
                 <GoalCard 
     areaOfNeed={"Comprehension"}
@@ -232,7 +232,7 @@ export default function TranslationPage() {
     annualGoalDate={"8/30/2023"}
     annualGoalDescription={"By 8/30/2023, Keiry will display improved fine motor skills to meet the measurable objectives for increased independence and greater success in classroom activities, given adaptive materials/tools and verbal cues as needed, in 4 out of 5 opportunities."}/>
                 </div>
-                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Accomodations"/>
+                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={servicesTabName}/>
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
                     <AccommodationCard
                         service="Specialized Academic Instruction"
@@ -265,7 +265,7 @@ export default function TranslationPage() {
                         duration="100 min"
                     />
                 </div>
-                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Full Text" />
+                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={textTabName} />
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
                     <div className="join p-0">
                         <button className="join-item btn" onClick={() => {setpageIndex(Math.max(pageIndex - 1, 0))}}>«</button>
@@ -274,7 +274,7 @@ export default function TranslationPage() {
                     </div>
                     <text className='leading-relaxed whitespace-pre-line overflow-y-auto'>{translationText[pageIndex]}</text>
                 </div>
-                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label="Download" />
+                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={downloadTabName} />
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
                     <iframe className='iframe h-screen' src={`/iep_translated.pdf`} type="application/pdf" width='100%'/>
                 </div>

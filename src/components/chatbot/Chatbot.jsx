@@ -5,7 +5,7 @@ import { useChat, Message } from 'ai/react';
 import PromptSuggestionRow from './components/PromptSuggestions/PromptSuggestionsRow';
 import useConfiguration from './hooks/useConfiguration';
 
-export default function Home() {
+export default function Chatbot({chatbotTitle, chatbotDescription, sendButtonText, p1, p2, p3, p4}) {
   const { append, messages, input, handleInputChange, handleSubmit } = useChat();
   const { useRag, llm, similarityMetric, setConfiguration } = useConfiguration();
 
@@ -36,10 +36,10 @@ export default function Home() {
       <div className='pb-6'>
           <div className='flex justify-between'>
             <div className='flex items-center gap-2'>
-              <h1 className='text-xl md:text-2xl font-medium'>AIEP Chatbot</h1>
+              <h1 className='text-xl md:text-2xl font-medium'>{chatbotTitle}</h1>
             </div>
           </div>
-          <p className="text-sm md:text-base mt-2 md:mt-4">Please type your questions or requests below. Responses are sourced from AIEP Knowledge Base and a link for further reading will be provided.</p>
+          <p className="text-sm md:text-base mt-2 md:mt-4">{chatbotDescription}</p>
         </div>
         <div className='flex-1 relative overflow-y-auto my-4 md:my-6'>
           <div className='absolute w-full'>
@@ -47,7 +47,9 @@ export default function Home() {
           </div>
         </div>
         {!messages || messages.length === 0 && (
-          <PromptSuggestionRow onPromptClick={handlePrompt} />
+          <PromptSuggestionRow onPromptClick={handlePrompt} prompts={[
+            p1, p2, p3, p4
+          ]} />
         )}
         <form className='flex h-[40px] gap-2' onSubmit={handleSend}>
           <input onChange={handleInputChange} value={input} className='flex-1 text-sm md:text-base outline-none bg-transparent rounded-md p-2' placeholder='Send a message...' />
@@ -55,7 +57,7 @@ export default function Home() {
             <svg width="20" height="20" viewBox="0 0 20 20">
               <path d="M2.925 5.025L9.18333 7.70833L2.91667 6.875L2.925 5.025ZM9.175 12.2917L2.91667 14.975V13.125L9.175 12.2917ZM1.25833 2.5L1.25 8.33333L13.75 10L1.25 11.6667L1.25833 17.5L18.75 10L1.25833 2.5Z" />
             </svg>
-            <span className='origin:block font-semibold text-sm ml-2'>Send</span>
+            <span className='origin:block font-semibold text-sm ml-2'>{sendButtonText}</span>
           </button>
         </form>
       </section>

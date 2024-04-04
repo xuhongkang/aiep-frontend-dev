@@ -37,5 +37,25 @@
         "r1": "Need Insights on your IEP Document?",
         "r2": "<--   Try out the IEP Digest and personalized chatbot",
         "r3": "For experienced parents trying to understand their child's IEP"
+    },
+    "Workspace2": {
+        "digestTitle": "IEP Digest",
+        "digestDescription": "Please utilize the below tools to view your processed IEP document.",
+        "accessError": "The Access Code You've Provided Does Not Exist, Please Try Again",
+        "accessMessage": "Please enter your access code below:",
+        "accessPlaceholder": "Enter access code",
+        "accessSubmit": "Submit",
+        "downloadTabName": "Download",
+        "textTabName": "Full Text",
+        "servicesTabName": "Services",
+        "goalsTabName": "Goals",
+        "scoresTabName": "Scores",
+        "chatbotTitle": "AIEP Chatbot",
+        "chatbotDescription": "Please type your questions or requests below. Responses are sourced from AIEP Knowledge Base and a link for further reading will be provided.",
+        "sendButtonText": "Send",
+        "p1": "What types of sensitive personal information are in an IEP?",
+        "p2": "Please explain different IEP reviews.",
+        "p3": "What is standard reclassification its difference with individual?",
+        "p4": "What meetings do I have to go to if my child transitions to another district?"
     }
 }

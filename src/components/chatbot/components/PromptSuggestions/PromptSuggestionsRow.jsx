@@ -1,13 +1,6 @@
 import PromptSuggestionButton from "./PromptSuggestionButton";
 
-const PromptSuggestionRow = ({ onPromptClick }) => {
-  const prompts = [
-    'What types of sensitive personal information are in an IEP?',
-    'Please explain different IEP reviews.',
-    'What is standard reclassification its difference with individual?',
-    'What meetings do I have to go to if my child transitions to another district?'
-  ];
-
+const PromptSuggestionRow = ({ onPromptClick, prompts }) => {
   return (
     <div className="flex flex-row flex-wrap justify-start items-center py-4 gap-2">
       {prompts.map((prompt, index) => (
