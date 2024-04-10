@@ -38,10 +38,10 @@ export async function POST(req) {
     const ragPrompt = [
       {
         role: 'system',
-        content: `You are an AI assistant answering questions about Individualized Education Programs. Must output markdown code. Must reference the right url links in the context if applicable. Must use simple elementary level words.
+        content: `You are an AI assistant answering questions about Individualized Education Programs. Must output markdown. Must reference the right url links in the context if applicable. Must use simple elementary level words.
         context: ${docContext} 
         current prompt: '${latestMessage}'
-        Strictly reply in the language the current prompt is given in (don't change the url links). Try to answer relevant questions readable to low literacy parents.".
+        Strictly reply in the language the current prompt is given in (don't change url). Try to answer relevant questions readable to low literacy parents.".
       `,
       },
     ]

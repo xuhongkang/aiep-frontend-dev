@@ -1,23 +1,39 @@
 'use client'
 import TranslationPage from '@/components/TranslationPage'
-import ChatBotPage from '@/components/ChatBotPage'
 import ChatBot from '@/components/chatbot/Chatbot'
-import { getSessionData } from '@/components/API';
-import { useState, useEffect } from 'react';
-import {useSearchParams} from 'next/navigation';
-import { getURLWithSearchParams } from '@/navigation';
-import { useLocale } from 'next-intl';
-import {useRouter} from '@/navigation';
+import React, { useState } from 'react';
 
 export default function Workspace({digestTitle, digestDescription, accessError, accessMessage, accessPlaceholder, accessSubmit, downloadTabName, textTabName, servicesTabName, goalsTabName, scoresTabName, chatbotTitle, chatbotDescription, sendButtonText, p1, p2, p3, p4}) {
+  const [isChatbotVisible, toggleChatbotVisibility] = useState(false);
+  
   return (
-    <div className="flex flex-row snap-x snap-mandatory overflow-x-auto h-full"
-      style={{height: '100vh',}}>
-      <div className="flex-none w-full md:w-1/2 snap-center overflow-x-hidden h-full">
-        <TranslationPage digestTitle={digestTitle} digestDescription={digestDescription} accessError={accessError} accessMessage={accessMessage} accessPlaceholder={accessPlaceholder} accessSubmit={accessSubmit} downloadTabName={downloadTabName} textTabName={textTabName} servicesTabName={servicesTabName} goalsTabName={goalsTabName} scoresTabName={scoresTabName}/>
+    <div className="relative w-screen h-screen">
+      {/* Desktop View */}
+      <div className="hidden md:flex w-full h-full">
+        <div className="w-1/2 h-full">
+          <TranslationPage digestTitle={digestTitle} digestDescription={digestDescription} accessError={accessError} accessMessage={accessMessage} accessPlaceholder={accessPlaceholder} accessSubmit={accessSubmit} downloadTabName={downloadTabName} textTabName={textTabName} servicesTabName={servicesTabName} goalsTabName={goalsTabName} scoresTabName={scoresTabName}/>
+        </div>
+        <div className="w-1/2 h-full">
+          <ChatBot chatbotTitle={chatbotTitle} chatbotDescription={chatbotDescription} sendButtonText={sendButtonText} p1={p1} p2={p2} p3={p3} p4={p4}/>
+        </div>
       </div>
-      <div className="flex-none w-full md:w-1/2 snap-center overflow-x-hidden h-full">
-        <ChatBot chatbotTitle={chatbotTitle} chatbotDescription={chatbotDescription} sendButtonText={sendButtonText} p1={p1} p2={p2} p3={p3} p4={p4}/>
+
+      {/* Mobile View */}
+      <div className="md:hidden flex flex-col w-full h-full">
+        <button 
+            className="w-full py-2 btn btn-primary"
+            onClick={() => toggleChatbotVisibility(!isChatbotVisible)}
+          >{isChatbotVisible ? 'Show Digest' : 'Show Chatbot'}
+        </button>
+        {!isChatbotVisible ? (
+          <div className="w-full h-full">
+          <TranslationPage digestTitle={digestTitle} digestDescription={digestDescription} accessError={accessError} accessMessage={accessMessage} accessPlaceholder={accessPlaceholder} accessSubmit={accessSubmit} downloadTabName={downloadTabName} textTabName={textTabName} servicesTabName={servicesTabName} goalsTabName={goalsTabName} scoresTabName={scoresTabName}/>
+          </div>
+        ) : (
+          <div className="w-full h-full">
+            <ChatBot chatbotTitle={chatbotTitle} chatbotDescription={chatbotDescription} sendButtonText={sendButtonText} p1={p1} p2={p2} p3={p3} p4={p4}/>
+          </div>
+        )}
       </div>
     </div>
   );

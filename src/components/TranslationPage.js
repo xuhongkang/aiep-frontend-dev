@@ -36,7 +36,7 @@ export default function TranslationPage({digestTitle, digestDescription, accessE
 
     return (
         <div className="flex flex-col h-full w-full rounded-md p-2 md:p-6">
-            <div className='pb-6 flex-none'>
+            <div className='pb-6 w-full'>
                 <div className='flex justify-between'>
                     <div className='flex items-center gap-2'>
                     <h1 className='chatbot-text-primary text-xl md:text-2xl font-medium'>{digestTitle}</h1>
