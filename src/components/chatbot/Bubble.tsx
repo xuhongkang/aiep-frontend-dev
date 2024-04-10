@@ -12,7 +12,7 @@ const Bubble:JSXElementConstructor<any> = forwardRef(function Bubble({ content }
       <div className={`flex ${isUser ? 'mx-2' : 'justify-end'}`}>
         <div className={`chat-bubble ${isUser ? 'bg-secondary text-secondary-content' : 'bg-neutral text-neutral-content'}`}>
           {content.processing ? (
-            <div className="w-3 h-3 flex items-center justify-center">
+            <div className="w-2 h-2 flex items-center justify-center">
               <div className="dot-flashing" />
             </div>
           ) : (

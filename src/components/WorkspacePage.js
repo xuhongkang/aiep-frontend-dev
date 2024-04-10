@@ -21,7 +21,7 @@ export default function Workspace({digestTitle, digestDescription, accessError, 
       {/* Mobile View */}
       <div className="md:hidden flex flex-col w-full h-full">
         <button 
-            className="w-full py-2 btn btn-primary"
+            className="w-full btn btn-outline btn-info btn-sm"
             onClick={() => toggleChatbotVisibility(!isChatbotVisible)}
           >{isChatbotVisible ? 'Show Digest' : 'Show Chatbot'}
         </button>
