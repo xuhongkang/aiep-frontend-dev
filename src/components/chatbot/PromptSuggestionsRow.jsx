@@ -5,7 +5,7 @@ const PromptSuggestionRow = ({ onPromptClick, prompts }) => {
         <button
           key={`suggestion-${index}`}
           onClick={() => onPromptClick(prompt)}
-          className="btn btn-secondary btn-xs sm:btn-sm md:btn-md lg:btn-md
+          className="btn btn-secondary btn-xs sm:btn-sm md:btn-md lg:btn-lg
           rounded-lg whitespace-normal break-words max-w-full text-left"
         >{prompt}
         </button>
