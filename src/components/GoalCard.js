@@ -1,7 +1,7 @@
 export default function GoalCard({areaOfNeed, goalDescription, progressRate, baselineDescription, progessReport1Date, progessReport1Description, progessReport2Date, progessReport2Description, progessReport3Date, progessReport3Description, annualGoalDate, isGoalMet,
 detailText, baselineText, pr1, pr2, pr3, goalText}) {
     return (
-        <div className={`${"card w-full text-primary-content"} ${isGoalMet ? 'bg-success' : 'bg-error'}`}>
+        <div className={`${"card w-full text-primary-content"} ${isGoalMet ? 'bg-green-700' : 'bg-error'}`}>
             <div className="card-body p-0">
                 <div className='flex p-5'>
                     <div className='flex-1 whitespace-nowrap text-wrap'>
