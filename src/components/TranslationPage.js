@@ -76,8 +76,6 @@ export default function TranslationPage({digestTitle, digestDescription, accessE
                
             ) : (
             <div role="tablist" className="tabs tabs-boxed whitespace-nowrap flex-grow items-start overflow-hidden">
-                <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={scoresTabName}/>
-                <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">Working In Progress</div>
                 <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={goalsTabName}/>
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none" id='haha'>
                 <ul>
