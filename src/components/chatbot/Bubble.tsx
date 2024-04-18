@@ -19,6 +19,7 @@ const Bubble:JSXElementConstructor<any> = forwardRef(function Bubble({ content }
             <Markdown
               remarkPlugins={[remarkGfm]}
               components={{
+                a: ({ href, children }) => <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>,
                 code({ node, children, ...props }) {
                   return (
                     <code {...props}>

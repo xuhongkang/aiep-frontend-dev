@@ -26,7 +26,17 @@ export default function Workspace({params: {locale}}: Props) {
       chatbotTitle={t('chatbotTitle')} 
       chatbotDescription={t('chatbotDescription')} 
       sendButtonText={t('sendButtonText')} 
-      p1={t('p1')} p2={t('p2')} p3={t('p3')} p4={t('p4')}/>
+      p1={t('p1')} p2={t('p2')} p3={t('p3')} p4={t('p4')}
+      detailText={t('detailText')}
+      baselineText={t("baselineText")}
+      pr1={t('pr1')} pr2={t('pr2')} pr3={t('pr3')}
+      goalText={t('goalText')}
+      startText={t('startText')}
+      durationText={t('durationText')}
+      frequencyText={t('frequencyText')}
+      providerText={t('providerText')}
+      commentsText={t('commentsText')}
+      sendPlaceholderText={t('sendPlaceholderText')}/>
     </div>
   );
 }

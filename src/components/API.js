@@ -57,15 +57,18 @@ export async function getSessionData(accessCode) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ accessCode }),
+        body: JSON.stringify({accessCode}),
     });
-
     if (!response.ok) {throw new Error('Response Not Ok');}
     const data = await response.json();
-    const content = data.content;
-    const assistantId = data.assistant_id;
-    const conversationHistory = data.conversation_history;
-    return [content, assistantId, conversationHistory]
+    const text = data.text;
+    const text_t = data.text_t;
+    const goals = data.goals;
+    const goals_t = data.goals_t;
+    const services = data.services;
+    const services_t = data.services_t;
+    const url = data.url;
+    return [text, text_t, goals, goals_t, services, services_t, url]
 }
 
 export async function getChatReponse(accessCode, assistantId, prompt) {
