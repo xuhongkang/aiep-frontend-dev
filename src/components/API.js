@@ -23,6 +23,7 @@ export async function login(username, password) {
 
     if (!response.ok) {throw new Error('Login failed');}
     const data = await response.json();
+    console.log(data)
     const userId = data.UserId;
     return userId
 }

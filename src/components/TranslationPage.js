@@ -3,6 +3,7 @@ import {useState} from 'react';
 import GoalCard from './GoalCard';
 import { getSessionData } from './API';
 import AccommodationCard from './AccommodationCard'
+import { useLocale } from 'next-intl';
 
 export default function TranslationPage({digestTitle, digestDescription, accessError, accessMessage, accessPlaceholder, accessSubmit, downloadTabName, textTabName, servicesTabName, goalsTabName, scoresTabName,
     detailText, baselineText, pr1, pr2, pr3, goalText, startText, durationText, frequencyText, providerText, commentsText}) {
@@ -13,16 +14,23 @@ export default function TranslationPage({digestTitle, digestDescription, accessE
     const [accessCode, setAccessCode] = useState('');
     const [isTablistVisible, setIsTablistVisible] = useState(false);
     const [isAccessCodeError, setAccessCodeError] = useState(false);
+    const currentLocale = useLocale();
+    console.log(currentLocale)
 
     const handleAccessCodeSubmit = (e) => {
         e.preventDefault();
         const fetchData = async (accessCode) => {
             try {
                 const data = await getSessionData(accessCode)
-                setTranslationText(data[1]['pages'])
-                setGoalsData(data[3]['pages'])
-                setServicesData(data[5]['pages'])
-                console.log(data[5]['pages'])
+                if (currentLocale == 'es') {
+                    setTranslationText(data[1]['pages'])
+                    setGoalsData(data[3]['pages'])
+                    setServicesData(data[5]['pages'])
+                } else {
+                    setTranslationText(data[0]['pages'])
+                    setGoalsData(data[2]['pages'])
+                    setServicesData(data[4]['pages'])
+                }
                 setAccessCodeError(false)
                 setIsTablistVisible(true)
             } catch (error) {
@@ -129,7 +137,17 @@ export default function TranslationPage({digestTitle, digestDescription, accessE
                 </div>
                 <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={downloadTabName} />
                 <div role="tabpanel" className="tab-content p-5 h-full overflow-auto flex-none">
+                    <div role="alert" className="alert alert-info">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span>Feature Currently Working In Progress</span>
+                    </div>
+                    <div role="alert" className="alert alert-info">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span>Uncionalidad Actualmente en Proceso de Desarrollo</span>
+                    </div>
+                    {/*
                     <iframe className='iframe h-screen' src={`/iep_translated.pdf`} type="application/pdf" width='100%'/>
+                    */}
                 </div>
             </div>)}
         </div>
