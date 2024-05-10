@@ -6,7 +6,7 @@ import {localeNames, localeSwitcherButtonText, localeSwitcherModalLabels} from '
 import {useRouter, usePathname, getURLWithSearchParams} from '@/navigation';
 import {useLocale} from 'next-intl';
 
-export default function LocaleSwitcherModal() {
+export default function LocaleSwitcherModal({defaultLangSet=true}) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
@@ -14,9 +14,11 @@ export default function LocaleSwitcherModal() {
   const currentLocale = useLocale();
 
   useEffect(() => {
-    const isLanguageSet = searchParams.get('langSet')
-    if (!isLanguageSet) 
-    {openModal()}
+    if (!defaultLangSet) {
+      const isLanguageSet = searchParams.get('langSet')
+      if (!isLanguageSet) 
+      {openModal()}
+    }
   },  [router.isReady]);
 
   function switchLocale(nextLocale) {
