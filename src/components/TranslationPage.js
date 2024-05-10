@@ -5,7 +5,7 @@ import { getSessionData } from './API';
 import AccommodationCard from './AccommodationCard'
 import { useLocale } from 'next-intl';
 
-export default function TranslationPage({digestTitle, digestDescription, accessError, accessMessage, accessPlaceholder, accessSubmit, downloadTabName, textTabName, servicesTabName, goalsTabName, scoresTabName,
+export default function TranslationPage({digestTitle, digestDescription, accessError, accessMessage, accessMessage2, accessPlaceholder, accessSubmit, downloadTabName, textTabName, servicesTabName, goalsTabName, scoresTabName,
     detailText, baselineText, pr1, pr2, pr3, goalText, startText, durationText, frequencyText, providerText, commentsText}) {
     const [translationText, setTranslationText] = useState([]);
     const [goalsData, setGoalsData] = useState([]);
@@ -15,7 +15,6 @@ export default function TranslationPage({digestTitle, digestDescription, accessE
     const [isTablistVisible, setIsTablistVisible] = useState(false);
     const [isAccessCodeError, setAccessCodeError] = useState(false);
     const currentLocale = useLocale();
-    console.log(currentLocale)
 
     const handleAccessCodeSubmit = (e) => {
         e.preventDefault();
@@ -69,19 +68,18 @@ export default function TranslationPage({digestTitle, digestDescription, accessE
             {!isTablistVisible ? (
                 <div className="card w-full bg-neutral text-neutral-content">
                 <div className="card-body items-center text-center">
-                <p className="text-sm md:text-base mt-2 md:mt-4">{accessMessage}</p>
-                  <form onSubmit={handleAccessCodeSubmit}>
-                    <input className='input input-bordered w-full max-w-xs'
-                        type="text" 
-                        placeholder={accessPlaceholder}
-                        value={accessCode} 
-                        onChange={(e) => setAccessCode(e.target.value)} 
-                    />
-                    <button className='btn btn-primary' type="submit">{accessSubmit}</button>
-                </form>
+                    <p className="text-sm md:text-base mt-2 md:mt-4">{accessMessage}</p>
+                    <form onSubmit={handleAccessCodeSubmit}>
+                        <input className='input input-bordered w-full max-w-xs'
+                            type="text" 
+                            placeholder={accessPlaceholder}
+                            value={accessCode} 
+                            onChange={(e) => setAccessCode(e.target.value)} />
+                        <button className='btn btn-primary' type="submit">{accessSubmit}</button>
+                    </form>
+                    <p className="text-sm md:text-base mt-2 md:mt-4">{accessMessage2}</p>
                 </div>
               </div>
-               
             ) : (
             <div role="tablist" className="tabs tabs-boxed whitespace-nowrap flex-grow items-start overflow-hidden">
                 <input type="radio" name="my_tabs_1" role="tab" className="tab justify-start" aria-label={goalsTabName}/>

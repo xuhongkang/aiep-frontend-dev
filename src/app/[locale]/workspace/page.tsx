@@ -16,6 +16,7 @@ export default function Workspace({params: {locale}}: Props) {
       digestDescription={t('digestDescription')} 
       accessError={t('accessError')} 
       accessMessage={t('accessMessage')} 
+      accessMessage2={t('accessMessage2')} 
       accessPlaceholder={t('accessPlaceholder')} 
       accessSubmit={t('accessSubmit')} 
       downloadTabName={t('downloadTabName')} 

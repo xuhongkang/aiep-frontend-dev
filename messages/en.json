@@ -39,24 +39,25 @@
         "r3": "For experienced parents trying to understand their child's IEP"
     },
     "Workspace2": {
-        "digestTitle": "IEP Digest",
-        "digestDescription": "Please utilize the below tools to view your processed IEP document.",
+        "digestTitle": "Summarize My IEP",
+        "digestDescription": "Please use the below tools to view your processed IEP document.",
         "accessError": "The Access Code You've Provided Does Not Exist, Please Try Again",
-        "accessMessage": "If you've received an access code via text message, please enter it here to customize the chatbot:",
+        "accessMessage": "Click below to get a TRANSLATION + SUMMARY of your IEP",
         "accessPlaceholder": "Enter access code",
+        "accessMessage2": "To upload your IEP, type in your access code. Didn't get an access code? Contact us at 650.562.6200",
         "accessSubmit": "Submit",
         "downloadTabName": "Download",
         "textTabName": "Full Text",
         "servicesTabName": "Services",
         "goalsTabName": "Goals",
         "scoresTabName": "Scores",
-        "chatbotTitle": "AIEP Chatbot",
-        "chatbotDescription": "Please type your questions or requests below. Responses are sourced from the [**AIEP Knowledge Base**](https://iep-kb-24839890c1f5.herokuapp.com/kb/tips/prepare) and a link for further reading will be provided.",
+        "chatbotTitle": "Ask My IEP",
+        "chatbotDescription": "Type a question below to find out more about your child's IEP.",
         "sendButtonText": "Send",
-        "p1": "What types of sensitive personal information are in an IEP?",
-        "p2": "Please explain different IEP reviews.",
-        "p3": "What is standard reclassification its difference with individual?",
-        "p4": "What meetings do I have to go to if my child transitions to another district?",
+        "p1": "What is an IEP?",
+        "p2": "What special services will be provided?",
+        "p3": "How will the school communicate my child's progress?",
+        "p4": "What specific goals have been set for my child?",
         "detailText": "Show/Hide Details",
         "baselineText": "Baseline",
         "pr1": "Progress Report 1",
@@ -68,6 +69,6 @@
         "frequencyText": "Frequency",
         "providerText": "Provider",
         "commentsText": "Comments",
-        "sendPlaceholderText": "Ask a Question..."
+        "sendPlaceholderText": "Type your question here."
     }
 }
