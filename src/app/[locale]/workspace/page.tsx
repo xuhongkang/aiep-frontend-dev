@@ -12,7 +12,8 @@ export default function Workspace({params: {locale}}: Props) {
   
   return (
     <div className='flex flex-col items-start'>
-      <WorkspacePage digestTitle={t('digestTitle')} 
+      <WorkspacePage goBackText={t('goBackText')}
+      digestTitle={t('digestTitle')} 
       digestDescription={t('digestDescription')} 
       accessError={t('accessError')} 
       accessMessage={t('accessMessage')} 

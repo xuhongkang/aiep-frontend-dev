@@ -39,6 +39,7 @@
         "r3": "Para padres con experiencia intentando entender el IEP de su hijo"
     },
     "Workspace2": {
+        "goBackText": "Regresar al Inicio",
         "digestTitle": "Resumir mi IEP",
         "digestDescription": "Por favor, utiliza las herramientas a continuación para ver tu documento IEP procesado.",
         "accessError": "El Código de Acceso que has proporcionado no existe, intenta nuevamente",

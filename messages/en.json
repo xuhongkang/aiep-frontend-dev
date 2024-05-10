@@ -39,6 +39,7 @@
         "r3": "For experienced parents trying to understand their child's IEP"
     },
     "Workspace2": {
+        "goBackText": "Return to Home",
         "digestTitle": "Summarize My IEP",
         "digestDescription": "Please use the below tools to view your processed IEP document.",
         "accessError": "The Access Code You've Provided Does Not Exist, Please Try Again",
