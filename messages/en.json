@@ -70,6 +70,8 @@
         "frequencyText": "Frequency",
         "providerText": "Provider",
         "commentsText": "Comments",
-        "sendPlaceholderText": "Type your question here."
+        "sendPlaceholderText": "Type your question here.",
+        "showDigest": "Summarize My IEP",
+        "showChatbot": "Ask Question About My IEP"
     }
 }

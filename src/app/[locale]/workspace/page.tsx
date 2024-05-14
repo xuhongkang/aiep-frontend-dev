@@ -38,7 +38,9 @@ export default function Workspace({params: {locale}}: Props) {
       frequencyText={t('frequencyText')}
       providerText={t('providerText')}
       commentsText={t('commentsText')}
-      sendPlaceholderText={t('sendPlaceholderText')}/>
+      sendPlaceholderText={t('sendPlaceholderText')}
+      showDigest={t("showDigest")} 
+      showChatbot={t("showChatbot")}/>
     </div>
   );
 }
