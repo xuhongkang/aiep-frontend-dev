@@ -13,7 +13,7 @@ export default function Workspace({goBackText, digestTitle, digestDescription, a
   
   return (
     <div className='w-screen flex justify-center'>
-      <div className="flex w-1/2 items-center h-screen">
+      <div className="flex w-full max-w-md md:w-1/2 items-center h-screen">
         <div className="flex flex-col h-full">
           <div className='flex'>
             <LocaleSwitcherModal className='flex-start'/>
