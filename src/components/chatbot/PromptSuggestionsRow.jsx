@@ -5,8 +5,8 @@ const PromptSuggestionRow = ({ onPromptClick, prompts }) => {
         <button
           key={`suggestion-${index}`}
           onClick={() => onPromptClick(prompt)}
-          className="btn btn-secondary btn-xs sm:btn-sm md:btn-md lg:btn-lg
-          rounded-lg whitespace-normal break-words max-w-full text-left"
+          className="btn btn-xs font-normal bg-whatsapp-prompt sm:btn-md md:btn-lg lg:btn-lg border-none
+          rounded-lg whitespace-normal break-words max-w-full text-left text-white"
         >{prompt}
         </button>
       ))}

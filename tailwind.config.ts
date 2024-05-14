@@ -13,6 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "whatsapp-background": "#ece5dd",
+        "whatsapp-system-message": "#f7f7f6",
+        "whatsapp-user-message": "#dcf8c6",
+        "whatsapp-prompt": "#128c7e",
+        "whatsapp-home": "#25d366",
+        "whatsapp-main": "#075e54"
+      }
     },
   },
   plugins: [require("daisyui")],

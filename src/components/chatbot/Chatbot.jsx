@@ -28,7 +28,7 @@ export default function Chatbot({chatbotTitle, chatbotDescription, sendButtonTex
   };
 
   return (
-    <main className="flex bg-primary w-full h-full flex-col items-center justify-center">
+    <main className="flex bg-whatsapp-background w-full h-full flex-col items-center justify-center text-black">
       <section className='flex flex-col w-full h-full rounded-md p-2 md:p-6 pb-5 md:pb-8'>
       <div className='pb-6 w-full'>
         <div className='flex justify-between'>
@@ -48,9 +48,9 @@ export default function Chatbot({chatbotTitle, chatbotDescription, sendButtonTex
             p1, p2, p3, p4
           ]} />
         )}
-        <form className='flex h-[40px] gap-2' onSubmit={handleSend}>
-          <input onChange={handleInputChange} value={input} className='flex-1 input text-lg md:text-base outline-none bg-transparent' placeholder={sendPlaceholderText} />
-          <button type="submit" className='flex btn btn-md rounded-md items-center justify-center px-2.5 origin:px3'>
+        <form className='flex h-[40px] gap-2 outline-none mb-8 mt-3' onSubmit={handleSend}>
+          <input onChange={handleInputChange} value={input} className='flex-1 input text-lg md:text-base outline-black bg-transparent text-black' placeholder={sendPlaceholderText} />
+          <button type="submit" className='flex btn bg-whatsapp-prompt text-white outline-none btn-md rounded-md items-center justify-center px-2.5 origin:px3'>
             <span className='origin:block font-semibold text-lg'>{sendButtonText}</span>
           </button>
         </form>

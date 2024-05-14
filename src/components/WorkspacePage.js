@@ -17,7 +17,7 @@ export default function Workspace({goBackText, digestTitle, digestDescription, a
         <div className="flex flex-col h-full">
           <div className='flex'>
             <LocaleSwitcherModal className='flex-start'/>
-            <button className="btn btn-primary p-2"
+            <button className="btn bg-whatsapp-main p-2 text-white"
               onClick={() => router.push('/')}>{goBackText}</button>
           </div>
           {!isChatbotVisible ? (
@@ -31,7 +31,7 @@ export default function Workspace({goBackText, digestTitle, digestDescription, a
             </div>
           )}
         <button 
-            className="w-full btn btn-outline btn-info btn-md"
+            className="w-full btn btn-outline bg-whatsapp-prompt btn-lg text-white"
             onClick={() => toggleChatbotVisibility(!isChatbotVisible)}
           >{isChatbotVisible ? showDigest : showChatbot}
         </button>
