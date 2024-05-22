@@ -4,7 +4,6 @@ import ChatBot from '@/components/chatbot/Chatbot'
 import React, { useState } from 'react';
 import {useRouter} from '@/navigation';
 import LocaleSwitcherModal from './LocaleSwitcherModal';
-import {unstable_setRequestLocale} from 'next-intl/server';
 
 export default function Workspace({goBackText, digestTitle, digestDescription, accessError, accessMessage, accessMessage2, accessPlaceholder, accessSubmit, downloadTabName, textTabName, servicesTabName, goalsTabName, scoresTabName, chatbotTitle, chatbotDescription, sendButtonText, p1, p2, p3, p4, sendPlaceholderText,
   detailText, baselineText, pr1, pr2, pr3, goalText, startText, durationText, frequencyText, providerText, commentsText, showDigest, showChatbot}) {
@@ -12,12 +11,12 @@ export default function Workspace({goBackText, digestTitle, digestDescription, a
   const router = useRouter();
   
   return (
-    <div className='w-screen flex justify-center'>
-      <div className="flex w-full max-w-md md:w-1/2 items-center h-screen">
-        <div className="flex flex-col h-full">
+    <div className='w-screen h-screen flex justify-center'>
+      <div className="flex max-w-md md:w-2/3 items-center h-full">
+        <div className="flex flex-col w-full h-full">
           <div className='flex'>
             <LocaleSwitcherModal className='flex-start'/>
-            <button className="btn bg-whatsapp-main p-2 text-white"
+            <button className="btn bg-whatsapp-main text-white"
               onClick={() => router.push('/')}>{goBackText}</button>
           </div>
           {!isChatbotVisible ? (
