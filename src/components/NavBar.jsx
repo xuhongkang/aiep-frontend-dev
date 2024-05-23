@@ -1,26 +1,28 @@
 'use client'
-import {useRouter} from '@/navigation';
+
+import LanguageModal from '@/components/LanguageModal'
+import { useRouter } from '@/navigation';
+
 export default function NavBar() {
-  const router = useRouter()
+  const router = useRouter();
+
   function navigateToWorkspace() {
-    router.push('/workspace');
-}
+      router.push('/workspace');
+  }
 
   return (
-    <div className="navbar bg-secondary w-screen">
-        <div className="flex-1 container flex justify-between">
-            <button className="btn btn-wide btn-ghost">
+    <div className="navbar bg-secondary w-screen h-10 sm:h-16 md:h-20 lg:h-24">
+        <div className="flex-none h-full">
+            <button className="btn btn-ghost h-full">
                 <img src='/images/icon.svg' alt="Logo" className="h-full"/>
             </button>
         </div>
-      <div className="flex w-full justify-end">
-        <button className="btn btn-secondary btn-ghost btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-            <h3 className="text-secondary-content">Language</h3>
-        </button>
-        <button className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg" onClick={navigateToWorkspace}>
-            <h3 className="text-primary-content">MyIEP Login</h3>
-        </button>
-      </div>
+    	<div className="flex-grow justify-end">
+    		<LanguageModal/>
+			<button className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg" onClick={navigateToWorkspace}>
+            	<h3 className="text-primary-content">MyIEP Login</h3>
+        	</button>
+      	</div>
     </div>
   );
 }

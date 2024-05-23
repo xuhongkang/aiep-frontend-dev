@@ -1,18 +1,11 @@
 import {Pathnames} from 'next-intl/navigation';
 
-export const localeNames = {en: 'English', es: 'Español'} as const;
+export const localeNames = {en: 'English', es: 'Español', tl: 'Tagalog', zh: '中文'} as const;
 export const locales = Object.keys(localeNames);
-export const localeSwitcherButtonText = {en: 'Language', es: 'Idioma'} as const;
-export const localeSwitcherModalLabels = {en: 'Choose Your Language', es: 'Elige tu idioma'} as const;
+export const localeSwitcherButtonText = {en: 'Language', es: 'Idioma', tl: 'Wika', zh: '语言'} as const;
+export const localeSwitcherModalLabels = {en: 'Choose Your Language', es: 'Elige tu idioma', tl: 'Piliin ang Iyong Wika', zh: '请选择你的语言'} as const;
 export const pathnames = {
   '/': '/',
-  '/upload': '/upload',
-  '/dashboard': '/dashboard',
-  '/workspace': {
-    en: '/workspace',
-    es: '/interactivo'
-  },
-
 } satisfies Pathnames<typeof locales>;
 
 export const localePrefix = undefined;

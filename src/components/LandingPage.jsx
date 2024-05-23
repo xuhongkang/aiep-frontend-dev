@@ -1,14 +1,6 @@
-'use client'
-import {useRouter} from '@/navigation';
 import NavBar from '@/components/NavBar'; // Adjust the import based on your file structure
 
 export default function LandingPage() {
-	const router = useRouter()
-
-	function navigateToWorkspace() {
-        router.push('/workspace');
-    }
-
   return (
     <div className="w-screen overflow-auto flex flex-col">
       <div className="fixed top-0 left-0 w-full z-10">
@@ -73,7 +65,7 @@ export default function LandingPage() {
         />
 		<div className='flex flex-col text-neutral-content py-10 sm:py-12 md:py-16 lg:py-20'>
 			<h3 className='flex mb-6 sm:mb-8 md:mb-10 lg:mb-14'>Please watch the video below on how to sign in to MyIEP Portal and use the tool:</h3>
-			<button className='btn btn-primary btn-block btn-lg' onClick={navigateToWorkspace}>
+			<button className='btn btn-primary btn-block btn-lg'>
 				<h3>MyIEP login</h3>
 			</button>
 		</div>
@@ -104,12 +96,12 @@ export default function LandingPage() {
 				<img
 				src="/images/landinglogo.svg"
 				alt="Burnes Center for Social Change Logo"
-				className="h-full p-2 sm:pd-3 md:pd:5 lg:p-8"
+				className="p-3 sm:p-4 md:p-5 lg:p-6"
 				/>
 				<img
 				src="/images/landinglogo2.svg"
 				alt="Innovate Public Schools Logo"
-				className="h-full p-2 sm:pd-3 md:pd:5 lg:p-8"
+				className="p-3 sm:p-4 md:-5 lg:p-6"
 				/>
 			</div>
 		</div>

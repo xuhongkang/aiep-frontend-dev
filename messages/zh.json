@@ -1,0 +1,80 @@
+{
+    "Metadata": {
+        "title": "AI-EP：翻译并理解您的 IEP！"
+    },
+    "HomePage": {
+        "Welcome": "你好！",
+        "Welcome2": "欢迎使用 AI-EP 版本 2.3.1 Beta 测试。如果您有访问密钥，请在下面输入：",
+        "Welcome3": "开始",
+        "LoginMessage": "立即登录！",
+        "Description1": "通过即时翻译，改变您的 IEP 体验，提供实时、全面的翻译，消除等待时间并增强理解。我们的生成式 AI 驱动聊天机器人提供个性化答案和支持。",
+        "SignUpMessage": "没有账户？立即注册！",
+        "Description2": "我们的解决方案旨在民主化教育资源的获取，确保所有家长，无论语言或背景如何，都能有效参与并贡献于孩子的个性化教育计划。",
+        "LoginText": "登录",
+        "RegisterText": "注册",
+        "UsernameText": "用户名",
+        "PasswordText": "密码"
+    },
+    "LocaleLayout": {
+        "title": "AI-EP：翻译并理解您的 IEP！"
+    },
+    "Dashboard": {
+        "ErrorMessage": "由于配置问题，Beta 版本 2.3 不支持仪表板和上传，请等待下一个版本！",
+        "MenuButtonMessage": "返回菜单"
+    },
+    "LocaleSwitcher": {
+        "label": "选择您的语言"
+    },
+    "Workspace": {
+        "TranslationText": "IEP 翻译",
+        "PromptText": "您想了解更多关于您孩子 IEP 过程的哪些信息？",
+        "InputText": "在此描述",
+        "AskText": "询问",
+        "BotText": "机器人",
+        "UserText": "用户"
+    },
+    "UserSelect": {
+        "l1": "对个性化教育计划不熟悉？",
+        "l2": "↑ 阅读更多关于 IEP 过程和时间表",
+        "l3": "适用于没有 IEP 文档的新家长",
+        "r1": "需要了解您的 IEP 文档？",
+        "r2": "↑ 试试 IEP 摘要和个性化聊天机器人",
+        "r3": "适用于试图理解孩子 IEP 的有经验的家长"
+    },
+    "Workspace2": {
+        "goBackText": "返回主页",
+        "digestTitle": "总结我的 IEP",
+        "digestDescription": "请使用以下工具查看您的处理过的 IEP 文档。",
+        "accessError": "您提供的访问代码不存在，请再试一次",
+        "accessMessage": "点击下方以获得您的 IEP 的翻译 + 摘要",
+        "accessPlaceholder": "输入访问代码",
+        "accessMessage2": "要上传您的 IEP，请输入访问代码。没有获取访问代码？请联系我们：650.562.6200",
+        "accessSubmit": "提交",
+        "downloadTabName": "下载",
+        "textTabName": "全文",
+        "servicesTabName": "服务",
+        "goalsTabName": "目标",
+        "scoresTabName": "分数",
+        "chatbotTitle": "询问我的 IEP",
+        "chatbotDescription": "在下方输入问题以了解更多关于您孩子 IEP 的信息。",
+        "sendButtonText": "发送",
+        "p1": "什么是 IEP？",
+        "p2": "将提供哪些特殊服务？",
+        "p3": "学校将如何沟通我孩子的进展？",
+        "p4": "为我孩子设定了哪些具体目标？",
+        "detailText": "显示/隐藏详情",
+        "baselineText": "基线",
+        "pr1": "进度报告 1",
+        "pr2": "进度报告 2",
+        "pr3": "进度报告 3",
+        "goalText": "目标",
+        "startText": "开始和结束",
+        "durationText": "持续时间",
+        "frequencyText": "频率",
+        "providerText": "提供者",
+        "commentsText": "评论",
+        "sendPlaceholderText": "在此输入您的问题。",
+        "showDigest": "总结我的 IEP",
+        "showChatbot": "询问关于我的 IEP 的问题"
+    }
+}
