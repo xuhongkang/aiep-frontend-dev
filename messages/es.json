@@ -1,7 +1,4 @@
 {
-    "Metadata": {
-        "title": "AI-EP: ¡Traduce y Entiende tu IEP!"
-    },
     "HomePage": {
         "Welcome": "¡Hola!",
         "Welcome2": "Bienvenido a la prueba beta de AI-EP Versión 2.3.1. Por favor, introduce tu clave de acceso a continuación si tienes una:",
@@ -73,8 +70,6 @@
         "frequencyText": "Frecuencia",
         "providerText": "Proveedor",
         "commentsText": "Comentarios",
-        "sendPlaceholderText": "Escribe tu pregunta aquí.",
-        "showDigest": "Resumir mi IEP",
-        "showChatbot": "Hacer una pregunta sobre mi IEP"
-    }  
+        "sendPlaceholderText": "Escribe tu pregunta aquí."
+    }    
 }

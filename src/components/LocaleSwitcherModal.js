@@ -55,7 +55,7 @@ export default function LocaleSwitcherModal({defaultLangSet=true}) {
 
   return (
     <div>
-      <button className="btn bg-whatsapp-prompt text-white" onClick={openModal}>{formatLocaleSwitcherText(localeSwitcherButtonText)}</button>
+      <button className="btn" onClick={openModal}>{formatLocaleSwitcherText(localeSwitcherButtonText)}</button>
       <dialog id="localeSwitcherModal" className="modal">
         <div className="modal-box modal-action join join-vertical">
         <div className='p-2'>{formatLocaleSwitcherText(localeSwitcherModalLabels)}</div>

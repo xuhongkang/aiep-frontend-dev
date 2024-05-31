@@ -1,18 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-    h1 {
-      @apply font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl;
-    }
-    h2 {
-      @apply font-semibold text-xl sm:text-3xl md:text-4xl lg:text-5xl;
-    }
-    h3 {
-      @apply sm:text-base md:text-xl lg:text-3xl;
-    }
-    p {
-      @apply text-base text-gray-500;
-    }
-  }

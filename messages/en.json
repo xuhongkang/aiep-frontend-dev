@@ -1,7 +1,4 @@
 {
-    "Metadata": {
-        "title": "AI-EP: Translate and Understand Your IEP!"
-    },
     "HomePage": {
         "Welcome": "Hello!",
         "Welcome2": "Welcome to AI-EP Version 2.3.1 Beta Testing. Please enter your Access Key below if you have one:",
@@ -73,8 +70,6 @@
         "frequencyText": "Frequency",
         "providerText": "Provider",
         "commentsText": "Comments",
-        "sendPlaceholderText": "Type your question here.",
-        "showDigest": "Summarize My IEP",
-        "showChatbot": "Ask Question About My IEP"
+        "sendPlaceholderText": "Type your question here."
     }
 }
