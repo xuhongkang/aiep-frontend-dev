@@ -48,7 +48,7 @@ export default function Chatbot({chatbotTitle, chatbotDescription, sendButtonTex
             p1, p2, p3, p4
           ]} />
         )}
-        <form className='flex h-[40px] gap-2' onSubmit={handleSend}>
+        <form className='flex h-[40px] gap-2 mt-4 mb-8' onSubmit={handleSend}>
           <input onChange={handleInputChange} value={input} className='flex-1 input text-lg md:text-base outline-none bg-transparent' placeholder={sendPlaceholderText} />
           <button type="submit" className='flex btn btn-md rounded-md items-center justify-center px-2.5 origin:px3'>
             <span className='origin:block font-semibold text-lg'>{sendButtonText}</span>
